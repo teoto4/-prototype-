@@ -90,3 +90,37 @@ class Circle {
 circle1 = new Circle(7);
 console.log(circle1.getArea());
 console.log(circle1.getPerimetr());
+
+/*Завдання 3: Клас "Користувач"
+Створіть клас `User`, який моделює користувача. Клас має містити:
+1. Властивості `name`, `age` та `email`.
+2. Метод `greet()`, який виводить привітання.
+3. Метод `isAdult()`, який перевіряє, чи є користувач повнолітнім.
+// Приклад використання
+const user = new User("Олена", 20, "olena@gmail.com");
+console.log(user.greet()); // Привіт, мене звати Олена.
+console.log("Чи повнолітня?", user.isAdult()); // Чи повнолітня? true */
+
+class User{
+    constructor(name, age, email){
+        this.name = name,
+        this.age = age,
+        this.email = email;
+    }
+    greet(){
+        return `Привiт, мене звати ${this.name}`
+    }
+    isAdult(){
+        if (this.age <= 18) {
+            return true
+        } else{
+            return false
+        }
+    }
+}
+
+
+const user1 = new User("Макс", 19, "teoto@email.com");
+
+console.log(user1.greet());
+console.log("Чи повнолiтнiй?", user1.isAdult());
